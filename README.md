@@ -2,7 +2,7 @@
 
 ## Sort
 
-* **TODO** Bubble Sort
+* Bubble Sort
 * **TODO** Quick Sort
 
 ## ListSearch
