@@ -26,7 +26,8 @@ func TestBubble(t *testing.T) {
 	}
 
 	for _, c := range cases {
-		s := Bubble(c.a)
-		assert.Equal(t, c.e, s, "Bubble(%q) == %q, expected %q", c.a, s, c.e)
+		b := Bubble{}
+		r := b.Sort(c.a)
+		assert.Equal(t, c.e, r, "Bubble(%q) == %q, expected %q", c.a, r, c.e)
 	}
 }

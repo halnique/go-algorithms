@@ -1,22 +1,25 @@
 package sort
 
-// Bubble return []int
-func Bubble(s []int) []int {
+type Bubble struct {}
+
+// Sort return []int
+func (*Bubble) Sort(s []int) []int {
+	r := append([]int{}, s...)
 	l := len(s)
 
 	for {
 		f := false
 
-		for i := 0; i < l-1; i++ {
+		for i := 0; i < l - 1; i++ {
 			ci := i
 			ni := i + 1
 
-			a := s[ci]
-			b := s[ni]
+			ia := r[ci]
+			ib := r[ni]
 
-			if a > b {
-				s[ni] = a
-				s[ci] = b
+			if ia > ib {
+				r[ni] = ia
+				r[ci] = ib
 				f = true
 			}
 		}
@@ -26,5 +29,5 @@ func Bubble(s []int) []int {
 		}
 	}
 
-	return s
+	return r
 }
